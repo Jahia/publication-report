@@ -1,1 +1,3 @@
 # publication-report
+
+Module to show a list of not-published nodes in a given path starting with /sites/<site_key>/...

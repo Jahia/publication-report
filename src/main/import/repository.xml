@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
+    <modules jcr:primaryType="jnt:modules">
+        <publication-report j:dependencies="default serverSettings"
+                         j:installedModules="publication-report"
+                         j:modulePriority="0"
+                         j:moduleType="module"
+                         j:title="Publication Report"
+                         jcr:primaryType="jnt:module">
+            <portlets jcr:primaryType="jnt:portletFolder"/>
+            <files jcr:primaryType="jnt:folder"/>
+            <contents jcr:primaryType="jnt:contentFolder"/>
+            <templates j:rootTemplatePath="/" jcr:primaryType="jnt:templatesFolder">
+                <files jcr:primaryType="jnt:folder">
+                    <serveradmin jcr:primaryType="jnt:folder">
+                        <publicationReport.png j:height="16"
+                                            j:width="16"
+                                            jcr:mixinTypes="jmix:image"
+                                            jcr:primaryType="jnt:file">
+                            <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                        </publicationReport.png>
+                    </serveradmin>
+                </files>
+                <contents jcr:primaryType="jnt:contentFolder"/>
+                <server-settings-base j:view="serverSettings"
+                                      jcr:mixinTypes="jmix:useUILocale"
+                                      jcr:primaryType="jnt:template">
+                    <system-components j:hiddenTemplate="false"
+                                       j:icon="/modules/serverSettings/templates/files/serveradmin/system_x0020_components/system_components.png"
+                                       j:titleKey="serverSettings.systemComponents"
+                                       jcr:mixinTypes="jmix:rbTitle"
+                                       jcr:primaryType="jnt:template">
+                        <publicationReport j:applyOn="jnt:globalSettings"
+                                        j:defaultTemplate="false"
+                                        j:hiddenTemplate="false"
+                                        j:icon="/modules/publication-report/templates/files/serveradmin/publicationReport.png"
+                                        j:requiredPermissionNames="administrationAccess"
+                                        j:titleKey="modules-helper.title"
+                                        jcr:mixinTypes="jmix:rbTitle"
+                                        jcr:primaryType="jnt:contentTemplate">
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <publication-report jcr:primaryType="jnt:publicationReport"/>
+                            </pagecontent>
+                        </publicationReport>
+                    </system-components>
+                </server-settings-base>
+            </templates>
+        </publication-report>
+    </modules>
+</content>
